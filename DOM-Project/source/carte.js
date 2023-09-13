@@ -117,7 +117,7 @@ let update = (id) => {
         label.innerHTML = `
         <h2> Total Price : ${amount} DH
         </h2>
-        <button class="checkout">Checkout</button>
+        <button class="checkout"><a style="color : white" href="Harry.html">Checkout</a></button>
         <button onclick="clearCart()" class="removeAll">Clear Cart</button>
         `;
     }else return ;

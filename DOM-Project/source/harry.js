@@ -4,7 +4,7 @@ let array = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop = (id) => {
   return (shop.innerHTML = ShopItemData.map((x) => {
-    let findIt = array.find((x)=> x.id === id) || [];
+    let search = array.find((x)=> x.id === id) || [] ;
     return `
         <div class="item">
         <img width="200" src=${x.img} alt="">
@@ -14,9 +14,8 @@ let generateShop = (id) => {
                 <div class="price">
                     <h2>${x.price} DH</h2>
                     <div class="button">
-                            <i onclick="minus(${x.id})" class="fa-solid fa-minus"></i>
-                            <div id=${x.id} class="quantity">${findIt.item === undefined? 0 : findIt.item}</div>
-                            <i onclick="plus(${x.id})" class="fa-solid fa-plus"></i>
+                        <div id=${x.id} class="quantity" style="display : none">${search.item === undefined? 0 : search.tem}</div>
+                        <button class="add" type="submit"<i onclick="plus(${x.id})"></i> Add To Cart </button>
                     </div>
                 </div>
             </div>

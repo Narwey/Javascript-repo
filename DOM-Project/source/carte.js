@@ -33,7 +33,7 @@ let calculation = () => {
                     <h3>
                     ${x.item *search.price} DH
                     </h3>
-                    <button class="like-button"><i class="fa-regular fa-heart"></i></button>
+                    <button id="like-button" class="like-button"><i id="i" class="fa-regular fa-heart"></i></button>
                 </div>
 
             </div>

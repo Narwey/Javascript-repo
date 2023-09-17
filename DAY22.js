@@ -3,11 +3,8 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
-
 const contacts = [];
-
 const phoneNumberPattern = /^(05|06|07)\d{8}$/;
-
 function validatePhoneNumber(input) {
     return phoneNumberPattern.test(input);
 }
@@ -37,7 +34,6 @@ function viewContacts() {
     }
     rl.prompt();
 }
-
 function searchContact() {
     rl.question('Enter the name to search: ', (name) => {
         const foundContact = contacts.find((contact) => contact.name === name);
@@ -50,18 +46,13 @@ function searchContact() {
         rl.prompt();
     });
 }
-
 function exitApplication() {
     console.log('Exit');
     rl.close();
 }
-
-
-
 // Start 
 rl.setPrompt('Enter a command (adding/view/search/exit): ');
 rl.prompt();
-
 rl.on('line', (input) => {
     const command = input.trim().toLowerCase();
     if (command === 'adding') {

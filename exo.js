@@ -18,6 +18,8 @@
 // }
 // // facto(4);
 
+// const { kMaxLength } = require("buffer");
+
 // // EXO 3 WITH RECURSIVE //
 // const fac = (n) => {
 //     return (n === 0 || n === 1) ? 1 : (n * fac(n - 1));
@@ -103,7 +105,7 @@
 
   // EXO 9 READS A SENTENCE 
 
-    // const read = (s) => {
+    
     //     let sa = s.trim();
     //     let lt = s.length ;
     //     let cpt = 1 ;
@@ -113,29 +115,44 @@
     //       }
     //     } return cpt ;
     // }
-    // let str = "anouar mcha ldar";
+    // const read = (str) => {
     // let n = str.trim().split(' ').length;
-    // const a = ['a','e','o','u','i','y'];
+    // const a = ['a','e','o','u','i','y','A','E','O','U','I','Y'];
     // let cpt = 0;
     // for (let i=0;i<str.length;i++){
     //   if(a.includes(str[i])){
     //     cpt++;
     //   }
     // }
-    // console.log(cpt)
+    //   console.log(cpt)
 
-    // console.log(n);
-    let a = [1,2,3,4,5];
-    let b = [2,4,7,8,9];
-    let s = 0 ;
-    for(let i = 0 ; i < a.length ; i++){
-      for(let j = 0 ; j < b.length ; j++){
-        if(a[i] !== b[j]){
-          s += a[i];
+    //   console.log(n)
+    // }
+
+    // read('Anouar mcha');
+
+    // EXO 10 
+    function sumOfDistinctElements(set1, set2) {
+      const distinctElements = [];
+      const array3 = set1.concat(set2);
+      for (const element of array3) {
+        if (set1.includes(element) && !set2.includes(element)) {
+          distinctElements.push(element);
+        } else if (set2.includes(element) && !set1.includes(element)) {
+          distinctElements.push(element);
         }
       }
+      // Calculate the sum 
+       const sum = distinctElements.reduce((x,y) =>  x+y ,0 );
+      return sum;
     }
-    console.log(s);
-      
+    
+    // Example usage:
+    const set1 = [3, 1, 7, 9];
+    const set2 = [2, 4, 1, 9, 3];
+    const result = sumOfDistinctElements(set1, set2);
+    console.log(result); // Output: 13
+    
 
-
+    
+    

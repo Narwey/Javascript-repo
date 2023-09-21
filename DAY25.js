@@ -44,7 +44,7 @@ const server = http.createServer(async (req, res) => {
 
 function readCityNameFromFile() {
   return new Promise((resolve, reject) => {
-    fs.readFile('input.txt', 'utf8', (err, data) => {
+    fs.readFile('inpute.txt', 'utf8', (err, data) => {
       if (err) {
         reject(err);
       } else {

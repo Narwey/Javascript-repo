@@ -2,11 +2,12 @@ const fs = require('fs');
 
 // Logging middleware
 function Logging(req, res, next) {
-  const time = new Date().toISOString();
+  const time = new Date();
   const method = req.method;
   const url = req.url;
 
-  const Informations = `${time} - ${method} ${url}\n`;
+  const Informations = `${method} - ${time} - ${url}\n`;
+  console.log(Informations);
 
   fs.appendFile('access.log', Informations, (err) => {
     if (err) {

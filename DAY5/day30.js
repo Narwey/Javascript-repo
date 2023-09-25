@@ -16,9 +16,7 @@ app.use(Logging);
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.set('view engine','ejs');
 
-app.get('/', ( req , res )=> {
-    res.render('home', {products});
-});
+
 
 // set Cache-Control and Expires 
 app.use('/public', (res, next) => {
@@ -30,7 +28,9 @@ app.use('/public', (res, next) => {
 });
 
 // our get request for all product 
-
+app.get('/', ( req , res )=> {
+    res.render('home', {products});
+});
 
 // our get request for a specific product by ID 
 app.get('/products/:id' , ( req , res ) => {

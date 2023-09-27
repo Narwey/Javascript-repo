@@ -132,27 +132,80 @@
     // read('Anouar mcha');
 
     // EXO 10 
-    function sumOfDistinctElements(set1, set2) {
-      const distinctElements = [];
-      const array3 = set1.concat(set2);
-      for (const element of array3) {
-        if (set1.includes(element) && !set2.includes(element)) {
-          distinctElements.push(element);
-        } else if (set2.includes(element) && !set1.includes(element)) {
-          distinctElements.push(element);
-        }
-      }
-      // Calculate the sum 
-       const sum = distinctElements.reduce((x,y) =>  x+y ,0 );
-      return sum;
-    }
+    // function sumOfDistinctElements(set1, set2) {
+    //   const distinctElements = [];
+    //   const array3 = set1.concat(set2);
+    //   for (const element of array3) {
+    //     if (set1.includes(element) && !set2.includes(element)) {
+    //       distinctElements.push(element);
+    //     } else if (set2.includes(element) && !set1.includes(element)) {
+    //       distinctElements.push(element);
+    //     }
+    //   }
+    //    const sum = distinctElements.reduce((x,y) =>  x+y ,0 );
+    //   return sum;
+    // }
     
-    // Example usage:
-    const set1 = [3, 1, 7, 9];
-    const set2 = [2, 4, 1, 9, 3];
-    const result = sumOfDistinctElements(set1, set2);
-    console.log(result); // Output: 13
+    // // Example usage:
+    // const set1 = [3, 1, 7, 9];
+    // const set2 = [2, 4, 1, 9, 3];
+    // const result = sumOfDistinctElements(set1, set2);
+    // console.log(result); // Output: 13
     
+    // EXO 11 Given integer and return how many in //
+
+    // const NumOfInteger = (Num) => {
+    //   const strn = Num + "" ;
+    //   const arrayN = strn.length;
+    //   return console.log(arrayN);
+    // }
+    // NumOfInteger(102222);
+
+    // EXO 12 
+
+    // const number = (num) => {
+    //   const reverse = num.toString().split('').reverse().join('');
+    //   console.log(reverse);}
+    // number(30);
 
     
-    
+    // const reverse = (num1) => {
+    //   const strn1 = num1 + "";
+    //   const array = strn1.split('');
+    //   const newarray = [];
+    //   let j = 0 ;
+    //   for(let i = array.length-1 ; i >= 0 ; i--){
+    //     newarray[j] = array[i];
+    //     j++ ;
+    //   }
+    //   return console.log(newarray.join(''));
+    // }
+
+    // reverse(200);
+
+    // EXO 12 divisible //
+
+  //   const div = (num) => {
+  //       while(num > 0){
+  //         if((num % 3 === 0 || num % 7 === 0)|| (num % 3 === 0 && num % 7 === 0)) {
+  //           return console.log(true) ;
+  //         }else {
+  //           return console.log(false);
+  //         }
+  //       }
+  //       console.log(`${num} is not a positive number , please enter a positive number`);
+  // }
+  //   div(-4);
+
+  // var countSheep = function (num) {
+  //   // Initialize an empty string
+  //   let str = "";
+  //   for (let i = 1; i <= num; i++) {
+  //     // Concatenate the current number and "sheep" to the string
+  //     str = str + `${i} sheep `;
+  //   }
+  //   console.log(str);
+  // }
+
+  // countSheep(3);
+

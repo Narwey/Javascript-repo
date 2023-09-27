@@ -1,4 +1,3 @@
-let data = '';
 let products = [
     { id: 1, name: 'iPhone', price: 1099.99 },
     { id: 2, name: 'Samsung Galaxy S21', price: 999.99 },
